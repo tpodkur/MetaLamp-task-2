@@ -8,9 +8,30 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    }
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/pages/index/index.html'
-    })
-  ]
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.(ttf|woff|woff2|eot)$/,
+        use: ['file-loader']
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: ['style-loader', 'sass-loader']
+      },
+    ]
+  }
 };
