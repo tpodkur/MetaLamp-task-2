@@ -1,3 +1,10 @@
+@import 'abstracts/variables';
+
+@import 'components/colors-and-type/color';
+@import 'components/logo';
+
+@import 'pages/colors-and-type';
+
 body {
   margin: 0;
 }
