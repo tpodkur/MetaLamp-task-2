@@ -1,0 +1,17 @@
+mixin colorItem(text, code, colorClassModificator)
+    div(class="color")
+        div(class="color__view" + colorClassModificator)
+        div(class="color__description")
+            p(class="color__name")= text
+            p(class="color__code")= code
+
+
+block colors
+    div(class="colors")
+        +colorItem('Dark Shade 100%', '#1F2041', '')
+        +colorItem('Dark Shade 75%', '#1F2041', ' color__view_shade-75')
+        +colorItem('Dark Shade 50%', '#1F2041', ' color__view_shade-50')
+        +colorItem('Dark Shade 25%', '#1F2041', ' color__view_shade-25')
+        +colorItem('Dark Shade 5%', '#1F2041', ' color__view_shade-5')
+        +colorItem('Purple', '#BC9CFF', ' color__view_purple')
+        +colorItem('Green', '#6FCF97', ' color__view_green')

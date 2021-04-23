@@ -1,6 +1,3 @@
-//@import "../../../css/montserrat.css";
-//@import "../../../css/montserrat-bold.css";
-
 .color {
   width: 281px;
   display: flex;
@@ -8,8 +5,32 @@
   &__view {
     width: 70px;
     height: 70px;
-    background-color: #1F2041;
+    background: #1F2041;
     border-radius: 6px;
+  }
+
+  &__view_shade-75 {
+    opacity: 0.75;
+  }
+
+  &__view_shade-50 {
+    opacity: 0.50;
+  }
+
+  &__view_shade-25 {
+    opacity: 0.25;
+  }
+
+  &__view_shade-5 {
+    opacity: 0.05;
+  }
+
+  &__view_purple {
+    background-color: #BC9CFF;
+  }
+
+  &__view_green {
+    background-color: #6FCF97;
   }
 
   &__description {
@@ -18,7 +39,8 @@
 
   &__name {
     margin: 0;
-    font-family: 'Montserrat-Bold', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     font-size: 19px;
     line-height: 28px;
     color: #1F2041;
